@@ -3,15 +3,17 @@
   "version": "1.0.0",
   "scripts": {
     "build": "tsc",
-    "build:w": "tsc"
+    "build:w": "tsc -w"
   },
   "dependencies": {
     "inversify": "^5.1.1",
     "reflect-metadata": "^0.1.13",
     "sqlite3": "^5.0.2",
-    "typeorm": "^0.2.37"
+    "typeorm": "^0.2.37",
+    "typeorm-naming-strategies": "^2.0.0"
   },
   "devDependencies": {
+    "@types/node": "^16.7.4",
     "@typescript-eslint/eslint-plugin": "^4.29.3",
     "@typescript-eslint/parser": "^4.29.3",
     "eslint": "^7.32.0",
