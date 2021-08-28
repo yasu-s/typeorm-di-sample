@@ -1,16 +1,18 @@
 import { createConnection, Connection } from 'typeorm';
 import { SnakeNamingStrategy } from 'typeorm-naming-strategies';
-import { User } from './entity/user';
+import * as entity from './entities';
+import { User } from './entities';
 
 const main = async (): Promise<void> => {
   let connection: Connection | null = null;
 
   try {
+    const entities = Object.values(entity);
     connection = await createConnection({
       type: 'sqlite',
       database: 'dist/database.sqlite',
       namingStrategy: new SnakeNamingStrategy(),
-      entities: [User],
+      entities: entities,
       synchronize: true,
     });
 
