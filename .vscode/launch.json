@@ -12,6 +12,15 @@
         "<node_internals>/**"
       ],
       "program": "${workspaceFolder}/dist/sample.js",
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch - sample2.js",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/dist/sample2.js",
     }
   ]
 }
