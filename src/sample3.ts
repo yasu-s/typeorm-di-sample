@@ -1,7 +1,7 @@
 import { Container } from 'inversify';
 import { User } from './entities';
 import { UserRepository } from './repositories';
-import { sharedModule, repositoryModule } from './inversify.config';
+import { sharedModule, repositoryModule, destroySharedModule } from './inversify.config';
 import { TYPES } from './types';
 
 const main = async (): Promise<void> => {
@@ -23,6 +23,7 @@ const main = async (): Promise<void> => {
   } catch (ex: unknown) {
     console.log(ex);
   } finally {
+    await destroySharedModule(container);
     container.unbindAll();
   }
 };
