@@ -7,7 +7,8 @@ import { NoteRepository } from './note-repository';
 
 @provide(TYPES.NoteRepository)
 export class NoteRepositoryImpl implements NoteRepository {
-  constructor(@inject(TYPES.Connection) private readonly conn: Connection) {}
+  /** DBコネクション */
+  @inject(TYPES.Connection) private readonly conn: Connection;
 
   public findAll(): Promise<Note[]> {
     const repository = this.conn.getRepository(Note);
