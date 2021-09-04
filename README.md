@@ -6,12 +6,14 @@
 
 ## 環境
 
+- typescript
 - typeorm
 - sqlite3
 - inversify
-- typescript
+- inversify-binding-decorators
 
 ## URL
 
 - https://typeorm.io/
 - https://github.com/inversify/InversifyJS
+- https://github.com/inversify/inversify-binding-decorators
