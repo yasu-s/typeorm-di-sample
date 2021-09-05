@@ -39,6 +39,7 @@
         "<node_internals>/**"
       ],
       "program": "${workspaceFolder}/dist/sample4.js",
+      "preLaunchTask": "build"
     }
   ]
 }
